@@ -1,0 +1,39 @@
+.infomain{align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 12vh 5vh;
+    }
+.infomain h3{    font-family: 'Poppins', sans-serif;
+    margin: 4vh 0vh;
+
+}  
+.info{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+font-size: 1.2rem;
+  gap: 8vh;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+.infobtn{
+    display: flex;
+    justify-content: center;
+    margin: 3vh 3vh;
+  
+}
+.infobtn button{  background-color:rgba(253, 33, 24, 255) ;
+    border: 0px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: white;
+    box-shadow: 2px 2px 5px orange;
+    padding: 1vh 15vh;}
+.cartypedrpdn{
+    background-color: white;
+    border: 1px solid rgb(0, 0, 0);
+}
+.orangeastrsk{
+    color:rgba(253, 33, 24, 255);
+}
