@@ -71,13 +71,14 @@ function Carfleet() {
   const [carfuel, setCarfuel] = useState(cardetails.bmw.fuel);
   
   useEffect(() => {
-  setCarImg(cardetails[car].img);
-  setCarrent(cardetails[car].rent);
-  setCarmodel(cardetails[car].model);
-  setCaryear(cardetails[car].year);
-  setCartransmission(cardetails[car].transmission);
-  setCarfuel(cardetails[car].fuel);
-}, [car]);
+    setCarImg(cardetails[car].img);
+    setCarrent(cardetails[car].rent);
+    setCarmodel(cardetails[car].model);
+    setCaryear(cardetails[car].year);
+    setCartransmission(cardetails[car].transmission);
+    setCarfuel(cardetails[car].fuel);
+  }, [car]);
+  
 
 
   return (
