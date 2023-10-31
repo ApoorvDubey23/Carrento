@@ -10,7 +10,7 @@ function Counter() {
         <div className="text-5xl font-bold max-md:2xl text-center px-1">
           Save<span className='text-red-500'> Big</span> with our easy car rental
         </div>
-        <div className='text-xl mt-2'>Top Airports. Local Suppliers. <span className='text-red-700'>24/7</span> Support</div>
+        <div className='text-xl mt-2 text-center'>Top Airports. Local Suppliers. <span className='text-red-700'>24/7</span> Support</div>
       </div>
 
       <div className='flex w-100 mt-10 justify-center items-center flex-col'>
