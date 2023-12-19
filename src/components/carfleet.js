@@ -7,9 +7,6 @@ import Fimg from '../images/fortuner.jpg';
 import SWIFTimg from '../images/swift.jpg';
 import './carfleet.css';
 
-/* Your custom styles here */
-
-
 function Carfleet() {
   const cardetails = {
     bmw: {
@@ -61,6 +58,8 @@ function Carfleet() {
       rent: 'Rs3000/day',
     },
   };
+  const carbtnclickstyle={"backgroundColor":"rgba(253, 33, 24, 255)",'scale':'1.1',"padding":"10px 15px","fontWeight":"semibold","fontStyle":"poppins","color":"white"};
+  const carbtnunclickstyle={"backgroundColor":"rgba(0, 0, 0, 0.113)","padding":"10px 15px","fontWeight":"semibold","fontStyle":"poppins"};
   
   const [car, setCar] = useState('bmw');
   const [carimg, setCarImg] = useState(cardetails.bmw.img);
@@ -69,6 +68,12 @@ function Carfleet() {
   const [caryear, setCaryear] = useState(cardetails.bmw.year);
   const [cartransmission, setCartransmission] = useState(cardetails.bmw.transmission);
   const [carfuel, setCarfuel] = useState(cardetails.bmw.fuel);
+  const [carbtnstylebmw, setCarbtnstylebmw] = useState(carbtnunclickstyle);
+  const [carbtnstyleaudi, setCarbtnstyleaudi] = useState(carbtnunclickstyle);
+  const [carbtnstylemercedes, setCarbtnstylemercedes] = useState(carbtnunclickstyle);
+  const [carbtnstylerangerover, setCarbtnstylerangerover] = useState(carbtnunclickstyle);
+  const [carbtnstyleswift, setCarbtnstyleswift] = useState(carbtnunclickstyle);
+  const [carbtnstylefortuner, setCarbtnstylefortuner] = useState(carbtnunclickstyle);
   
   useEffect(() => {
     setCarImg(cardetails[car].img);
@@ -77,29 +82,57 @@ function Carfleet() {
     setCaryear(cardetails[car].year);
     setCartransmission(cardetails[car].transmission);
     setCarfuel(cardetails[car].fuel);
+    if(car=='bmw'){
+      setCarbtnstylebmw(carbtnclickstyle)
+    }
+    else{setCarbtnstylebmw(carbtnunclickstyle)}
+    if(car=='swift'){
+      setCarbtnstyleswift(carbtnclickstyle)
+    }
+    else{setCarbtnstyleswift(carbtnunclickstyle)}
+
+     if(car=='mercedes'){
+      setCarbtnstylemercedes(carbtnclickstyle)
+    }
+    else{setCarbtnstylemercedes(carbtnunclickstyle)}
+    
+    if(car=='audi'){
+      setCarbtnstyleaudi(carbtnclickstyle)
+    }
+    else{setCarbtnstyleaudi(carbtnunclickstyle)}
+    if(car=='fortuner'){
+      setCarbtnstylefortuner(carbtnclickstyle)
+    }
+    else{setCarbtnstylefortuner(carbtnunclickstyle)}
+
+     if(car=='rangerover'){
+      setCarbtnstylerangerover(carbtnclickstyle)
+    }
+    else{setCarbtnstylerangerover(carbtnunclickstyle)}
+
+   
   }, [car]);
   
 
-
   return (
     <div className='crflt'>
-      <div className='crfltbtn flex justify-center items-center flex-wrap'>
-        <button className='carbtn max-md:text-[0.9rem]' onClick={() => setCar('bmw')}>
+      <div className='crfltbtn flex justify-center items-center flex-wrap gap-3 '>
+        <button className='carbtn  max-md:text-[0.9rem]' style={carbtnstylebmw} onClick={() => setCar('bmw')}>
           BMW m4
         </button>
-        <button className='carbtn max-md:text-[0.9rem]' onClick={() => setCar('audi')}>
+        <button className='carbtn  max-md:text-[0.9rem]' style={carbtnstyleaudi} onClick={() => setCar('audi')}>
           Audi A
         </button>
-        <button className='carbtn max-md:text-[0.9rem]' onClick={() => setCar('mercedes')}>
+        <button className='carbtn max-md:text-[0.9rem]'style={carbtnstylemercedes}  onClick={() => setCar('mercedes')}>
         Mercedes Benz
         </button>
-        <button className='carbtn max-md:text-[0.9rem]' onClick={() => setCar('rangerover')}>
+        <button className='carbtn max-md:text-[0.9rem]' style={carbtnstylerangerover}  onClick={() => setCar('rangerover')}>
         RangeRover
         </button>
-        <button className='carbtn max-md:text-[0.9rem]' onClick={() => setCar('fortuner')}>
+        <button className='carbtn max-md:text-[0.9rem]' style={carbtnstylefortuner}  onClick={() => setCar('fortuner')}>
         Fortuner
         </button>
-        <button className='carbtn max-md:text-[0.9rem]' onClick={() => setCar('swift')}>
+        <button className='carbtn max-md:text-[0.9rem]'style={carbtnstyleswift}  onClick={() => setCar('swift')}>
         Swift
         </button>
       </div>
@@ -135,15 +168,12 @@ function Carfleet() {
           <th>Model :</th>
             <td>{carmodel}</td>
           </td>
-       
-          
-           
-        
-        
       </tbody>
     </table></div>
       </div>
     </div>
+
+  
   );
 }
 
